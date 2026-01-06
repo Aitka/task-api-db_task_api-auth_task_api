@@ -45,3 +45,18 @@ Server | Uvicorn |
 ```bash
 git clone <your-repo-url>
 cd <your-repo-name>
+2. Create virtual environment (optional)
+python -m venv venv
+venv\Scripts\activate  # Windows
+
+3. Install dependencies
+pip install fastapi uvicorn sqlmodel passlib python-jose
+
+4. Run the server
+python -m uvicorn auth_task_api:app --reload
+
+5. Open in browser
+
+API root: http://127.0.0.1:8000
+
+Swagger docs: http://127.0.0.1:8000/docs
